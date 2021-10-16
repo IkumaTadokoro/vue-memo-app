@@ -16,6 +16,7 @@ export default {
       editingId: this.id
     }
   },
+
   props: {
     id: {
       type: Number,
@@ -26,6 +27,7 @@ export default {
       required: true
     }
   },
+
   methods: {
     update() {
       this.$emit('update', this.editingId, this.editingMemo)
@@ -40,6 +42,7 @@ export default {
       this.editingMemo = null
     }
   },
+
   watch: {
     id: function(newId) {
       this.editingId = newId

@@ -25,14 +25,17 @@ export default {
       editingMemo: null
     }
   },
+
   components: {
     List,
     Form,
     Add
   },
+
   mounted() {
     this.memos = JSON.parse(localStorage.getItem('memos'))
   },
+
   methods: {
     add(memo) {
       if (!memo) return
