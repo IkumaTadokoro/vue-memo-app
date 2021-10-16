@@ -16,7 +16,16 @@ export default {
       editingId: this.id
     }
   },
-  props: ['id', 'memo'],
+  props: {
+    id: {
+      type: Number,
+      required: true
+    },
+    memo: {
+      type: String,
+      required: true
+    }
+  },
   methods: {
     update() {
       this.$emit('update', this.editingId, this.editingMemo)

@@ -12,7 +12,9 @@
 
 <script>
 export default {
-  props: ['memos'],
+  props: {
+    memos: Array
+  },
   methods: {
     edit(id, memo) {
       this.$emit('edit', id, memo)
