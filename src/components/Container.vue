@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <Add @add="add"/>
     <List :memos="this.memos" @edit="edit"/>
 
@@ -22,7 +22,7 @@ export default {
       memos: [],
       editFlg: false,
       editingId: null,
-      editngMemo: null
+      editingMemo: null
     }
   },
   components: {
