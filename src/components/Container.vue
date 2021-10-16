@@ -37,7 +37,7 @@ export default {
     add(memo) {
       if (!memo) return
       this.memos.push(memo)
-      this.save()
+      this.$_container_save()
     },
     edit(...data) {
       const [id, memo] = data
@@ -48,18 +48,18 @@ export default {
     update(...data) {
       const [id, memo] = data
       this.memos.splice(id, 1, memo)
-      this.save()
-      this.reset()
+      this.$_container_save()
+      this.$_container_reset()
     },
     destroy(id) {
       this.memos.splice(id, 1)
-      this.save()
-      this.reset()
+      this.$_container_save()
+      this.$_container_reset()
     },
-    save() {
+    $_container_save() {
       localStorage.setItem('memos', JSON.stringify(this.memos))
     },
-    reset() {
+    $_container_reset() {
       this.editFlg = false
       this.editingId = null
       this.editingMemo = null

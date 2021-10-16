@@ -29,13 +29,13 @@ export default {
   methods: {
     update() {
       this.$emit('update', this.editingId, this.editingMemo)
-      this.reset()
+      this.$_form_reset()
     },
     destroy() {
       this.$emit('destroy', this.editingId)
-      this.reset()
+      this.$_form_reset()
     },
-    reset() {
+    $_form_reset() {
       this.editingId = null
       this.editingMemo = null
     }
