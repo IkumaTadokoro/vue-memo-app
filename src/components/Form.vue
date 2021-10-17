@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       editingMemo: this.memo,
       editingId: this.id
@@ -42,26 +42,31 @@ export default {
     }
   },
 
+  emits: [
+    'update',
+    'destroy']
+  ,
+
   methods: {
-    update() {
+    update () {
       this.$emit('update', this.editingId, this.editingMemo)
       this.$_form_reset()
     },
-    destroy() {
+    destroy () {
       this.$emit('destroy', this.editingId)
       this.$_form_reset()
     },
-    $_form_reset() {
+    $_form_reset () {
       this.editingId = null
       this.editingMemo = null
     }
   },
 
   watch: {
-    id: function(newId) {
+    id: function (newId) {
       this.editingId = newId
     },
-    memo: function(newMemo) {
+    memo: function (newMemo) {
       this.editingMemo = newMemo
     }
   }

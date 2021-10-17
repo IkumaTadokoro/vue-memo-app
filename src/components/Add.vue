@@ -39,6 +39,7 @@ export default {
       newMemo: '新規メモ'
     }
   },
+  emits: ['add'],
   methods: {
     register() {
       this.addFlg = !this.addFlg
