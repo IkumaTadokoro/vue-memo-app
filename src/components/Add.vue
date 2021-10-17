@@ -1,11 +1,32 @@
 <template>
   <div>
-    <div class="d-flex flex-end memo-area" v-if="!addFlg">
-      <button @click="register" type="button">＋</button>
+    <div
+      class="d-flex flex-end memo-area"
+      v-if="!addFlg"
+    >
+      <button
+        @click="register"
+        type="button"
+      >
+        ＋
+      </button>
     </div>
-    <div v-else class="d-flex memo-area">
-      <textarea v-model="newMemo" type="text" class="textarea"></textarea>
-      <button @click="add" type="button" class="btn">追加</button>
+    <div
+      v-else
+      class="d-flex memo-area"
+    >
+      <textarea
+        v-model="newMemo"
+        type="text"
+        class="textarea"
+      />
+      <button
+        @click="add"
+        type="button"
+        class="btn"
+      >
+        追加
+      </button>
     </div>
   </div>
 </template>

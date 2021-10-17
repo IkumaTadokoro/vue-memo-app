@@ -1,8 +1,15 @@
 <template>
   <div>
     <ul class="memo-list-group">
-      <li class="memo-list" v-for="(memo, i) in memos" :key="i">
-        <a class="memo-link" @click="edit(i, memo)">
+      <li
+        class="memo-list"
+        v-for="(memo, i) in memos"
+        :key="i"
+      >
+        <a
+          class="memo-link"
+          @click="edit(i, memo)"
+        >
           {{ splitOneLine(memo) }}
         </a>
       </li>

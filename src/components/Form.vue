@@ -1,9 +1,23 @@
 <template>
   <div>
     <div class="d-flex memo-area">
-      <textarea class="textarea" v-model="editingMemo" type="text"></textarea>
-      <button type="button" @click="update">編集</button>
-      <button type="button" @click="destroy">削除</button>
+      <textarea
+        class="textarea"
+        v-model="editingMemo"
+        type="text"
+      />
+      <button
+        type="button"
+        @click="update"
+      >
+        編集
+      </button>
+      <button
+        type="button"
+        @click="destroy"
+      >
+        削除
+      </button>
     </div>
   </div>
 </template>

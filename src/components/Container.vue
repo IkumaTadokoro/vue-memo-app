@@ -1,13 +1,18 @@
 <template>
   <div>
-    <Add @add="add"/>
-    <List :memos="this.memos" @edit="edit"/>
+    <Add @add="add" />
+    <List
+      :memos="this.memos"
+      @edit="edit"
+    />
 
-    <Form v-if="editFlg"
-          :id="editingId"
-          :memo="editingMemo"
-          @update="update"
-          @destroy="destroy"/>
+    <Form
+      v-if="editFlg"
+      :id="editingId"
+      :memo="editingMemo"
+      @update="update"
+      @destroy="destroy"
+    />
   </div>
 </template>
 
